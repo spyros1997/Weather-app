@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.weatherapp">
-
+    <uses-permission android:name="android.permission.INTERNET"/> <!--gia kathe efarmogh h opoia xreiazetai internet,prepei na prosthesoyme authn thn entolh wste na to dwsoyme to dikaioma na syndethei sto internet.-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait"> <!--gia na einai panta se thesi portraitoy.-->
         <activity android:name=".menu_Activity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
