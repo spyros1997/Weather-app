@@ -7,26 +7,44 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    private TextView textView;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
-    @Override
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class MainActivity extends AppCompatActivity {
+    private TextView text;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView) findViewById(R.id.textView5);
+        text = (TextView)findViewById(R.id.textView5);
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                opnemenu();
+                openActivity();
             }
         });
 
+
+
     }
-    private void opnemenu(){
-        Intent intent = new Intent(this, menu_Activity.class);
-        startActivity(intent);
-    }
-}
+
+            public  void openActivity(){
+            Intent intent = new Intent(this, menu_Activity.class);
+            startActivity(intent);
+            }
+        }
+
+
